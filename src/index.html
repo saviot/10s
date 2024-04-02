@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyek 5 | Around</title>
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <img src="./images/logo.svg" alt="logo" />
+    </header>
+    <section class="profile">
+      <div class="profile__container">
+        <div class="profile__image">
+          <img class="profile__image-src" src="#" alt="profile" />
+          <div class="edit-icon">
+            <button id="openModalUpdateAvatarBtn">
+              <img src="./images/profile_edit.svg" alt="edit" />
+            </button>
+          </div>
+        </div>
+        <div class="profile__info">
+          <div class="profile__name-container">
+            <h1 class="profile__name">....</h1>
+            <button class="profile__icon" id="openModalBtn">
+              <img src="./images/icon_edit.svg" alt="edit akun" />
+            </button>
+          </div>
+          <p class="profile__title">..</p>
+        </div>
+        <button id="openModalCardBtn" class="profile__button">
+          <img src="./images/icon_add.svg" alt="tambah" />
+        </button>
+      </div>
+    </section>
+    <section class="card">
+      <div class="card__container"></div>
+    </section>
+    <footer class="footer">
+      <p class="footer__text">© 2021 Around The U.S.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <form class="modal__content form">
+        <span class="modal__close">
+          <img src="./images/icon_close.svg" alt="close" />
+        </span>
+        <h3 class="modal__title">Edit Profile</h3>
+        <div class="modal__wrapper-input">
+          <div class="modal__input">
+            <input
+              type="text"
+              placeholder="Nama"
+              class="input"
+              name="nama"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+          </div>
+          <p class="error-message">---</p>
+        </div>
+        <div class="modal__wrapper-input">
+          <div class="modal__input">
+            <input
+              type="text"
+              placeholder="Title"
+              class="input"
+              name="title"
+              required
+              minlength="2"
+              maxlength="200"
+            />
+          </div>
+          <p class="error-message">---</p>
+        </div>
+        <button type="submit" class="modal__button button">Simpan</button>
+      </form>
+    </div>
+
+    <!-- Modal Create Card -->
+    <div id="modalCreateCard" class="modal">
+      <form class="modal__content form">
+        <span class="modal__close">
+          <img src="./images/icon_close.svg" alt="close" />
+        </span>
+        <h3 class="modal__title">Tambah tempat</h3>
+        <div class="modal__wrapper-input">
+          <div class="modal__input">
+            <input
+              type="text"
+              placeholder="Nama tempat"
+              name="nama_tempat"
+              class="input"
+              required
+              minlength="2"
+              maxlength="100"
+            />
+          </div>
+          <p class="error-message">---</p>
+        </div>
+        <div class="modal__wrapper-input">
+          <div class="modal__input">
+            <input
+              type="text"
+              placeholder="Link tempat"
+              class="input"
+              name="link_gambar"
+              required
+              pattern="https?://.+"
+            />
+          </div>
+          <p class="error-message">---</p>
+        </div>
+        <button type="submit" class="modal__button button">Simpan</button>
+      </form>
+    </div>
+
+    <!-- Modal Confirm Delete -->
+    <div id="modalConfirmDelete" class="modal">
+      <div class="modal__content">
+        <span class="modal__close">
+          <img src="./images/icon_close.svg" alt="close" />
+        </span>
+        <h3 class="modal__title">Apakah Anda Yakin?</h3>
+        <div class="modal__wrapper-button">
+          <button class="modal__button button">Ya</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Update Avatar -->
+    <div id="modalUpdateAvatar" class="modal">
+      <form class="modal__content form">
+        <span class="modal__close">
+          <img src="./images/icon_close.svg" alt="close" />
+        </span>
+        <h3 class="modal__title">Update Avatar</h3>
+        <div class="modal__wrapper-input">
+          <div class="modal__input">
+            <input
+              type="text"
+              class="input"
+              name="avatar"
+              required
+              placeholder="Link Avatar"
+              pattern="https?://.+"
+            />
+          </div>
+          <p class="error-message">---</p>
+        </div>
+        <button type="submit" class="modal__button button">Simpan</button>
+      </form>
+    </div>
+
+    <!-- Modal Image Preview -->
+    <div id="modalImagePreview" class="modal">
+      <div class="modal__content">
+        <span class="modal__close">
+          <img src="./images/icon_close.svg" alt="close" />
+        </span>
+        <img id="previewImage" src="#" alt="preview" />
+        <p id="namaImage">--</p>
+      </div>
+    </div>
+
+    <!-- Define the template -->
+    <template id="card-template">
+      <div class="card__item">
+        <button class="card__icon-trash card__delete">
+          <img src="./images/icon_trash.svg" alt="trash" />
+        </button>
+        <div class="card__image">
+          <img src="#" alt="" />
+        </div>
+        <div class="card__info">
+          <h2 class="card__info-title"></h2>
+          <div class="card__info-icon">
+            <button class="card__icon active">
+              <img
+                src="./images/icon_love_non_active.svg"
+                alt="non active love"
+              />
+            </button>
+            <button class="card__icon-x">
+              <img src="./images/icon_love_active.svg" alt="active love" />
+            </button>
+            <p class="card__like">0</p>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>

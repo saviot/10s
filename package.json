@@ -1,0 +1,35 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "1. Nama proyek: Tugas Sprint 5 Savio 2. Deskripsi proyek dan fungsinya: Proyek tugas triple ten sprint ke 5 yang berfungsi dalam membuat profile user website 3. Deskripsi teknologi dan teknik yang digunakan: menggunakan teknologi vscode dengan teknik js html css 4. Tautan menuju GitHub Pages: https://saviot.github.io/saviosprintss7/",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve --open",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "autoprefixer": "^10.4.18",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "postcss": "^8.4.36",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "url-loader": "^4.1.1",
+    "webpack-dev-server": "^5.0.3"
+  }
+}
